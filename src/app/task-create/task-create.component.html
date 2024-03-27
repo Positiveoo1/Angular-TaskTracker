@@ -1,0 +1,18 @@
+<form (submit)="onSubmit()">
+    <label for="title">Title:</label><br>
+    <input type="text" id="title" name="title" [(ngModel)]="task.title" required><br>
+    <label for="description">Description:</label><br>
+    <textarea id="description" name="description" [(ngModel)]="task.description" required></textarea><br>
+    <label for="deadline">Deadline:</label><br>
+    <input type="date" id="deadline" name="deadline" [(ngModel)]="task.deadline" required><br>
+    <label for="priority">Priority:</label><br>
+    <select id="priority" name="priority" [(ngModel)]="task.priority">
+      <option value="low">Low</option>
+      <option value="medium">Medium</option>
+      <option value="high">High</option>
+    </select><br>
+    <label for="assignees">Assignees:</label><br>
+    <input type="text" id="assignees" name="assignees" [(ngModel)]="task.assignees" required><br>
+    <button type="submit">Create Task</button>
+  </form>
+  
